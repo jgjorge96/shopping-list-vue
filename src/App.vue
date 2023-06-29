@@ -34,7 +34,7 @@
   </div>
 
   <form @submit.prevent="saveItems" v-if="editing">
-    <input v-model.trim="newItem" type="text" placeholder="Añadir producto"> {{ newItem }}
+    <input v-model.trim="newItem" type="text" placeholder="Añadir producto">
     <label>
       <input type="checkbox" v-model="newItemHightPriority">Muy importante
     </label>
