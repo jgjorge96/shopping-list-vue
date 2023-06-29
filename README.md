@@ -2,6 +2,9 @@
 
 Shopping List app made width Vue.js 3 context API + Vite and sass for styling
 
+# Demo
+https://shoppingvue.netlify.app/
+
 ## Project Setup
 
 ```sh
