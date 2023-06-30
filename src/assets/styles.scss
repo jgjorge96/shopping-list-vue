@@ -1,0 +1,87 @@
+.priority {
+    color: #e88c03;
+}
+.strikeout {
+    color: #666666;
+    text-decoration: line-through;
+}
+
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        color: #414141;
+        width: 300px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+    }
+    .btn-add {
+        background-color: #4fb560;
+    }
+    .btn-cancel {
+        background-color: #dc4f4f;
+    }
+}
+
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    
+
+    form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 48px;
+        gap: 16px;
+    
+        .text-input {
+            border: 2px solid black;
+            border-radius: 5px;
+            height: 32px;
+            padding: 8px;
+            outline: #414141;
+            font-size: 16px;
+            color: #414141;
+    
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+        button {
+            color: #414141;
+            padding: 0 8px;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            font-size: 14px;
+            background-color: #4fb560;
+        }
+        .checkbox {
+            font-size: 16px;
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        font-size: 24px;
+        padding: 16px;
+        max-width: 500px;
+    }
+    p {
+        font-size: 24px;
+    }
+}
