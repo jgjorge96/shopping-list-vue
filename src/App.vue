@@ -1,5 +1,5 @@
 <script setup>
-  import { ref } from 'vue';
+  import { ref, computed } from 'vue';
 
   const header = ref ('Shopping List App')
   const editing = ref(false)
@@ -8,6 +8,7 @@
     {id: 2, label: "5 chocolates", purchased: true, highPriority: false},
     {id: 3, label: "2 gaseosas", purchased: false, highPriority: true},
   ])
+  const reversedItems = computed(()=> [...items.value].reverse() )
 
   const newItem = ref("")
   const newItemHightPriority = ref("low")
@@ -41,7 +42,7 @@
     <button :disabled="newItem.length < 2">Añadir a la lista</button>
   </form>
   <ul>
-    <li v-for="(item, index) in items" @click="togglePurchased(item)" :key="item.id" :class="{strikeout: item.purchased, priority: item.highPriority}">{{ item.label }}</li>
+    <li v-for="(item, index) in reversedItems" @click="togglePurchased(item)" :key="item.id" :class="{strikeout: item.purchased, priority: item.highPriority}">{{ item.label }}</li>
   </ul>
   <p v-if="!items.length">Lista vacia</p>
 </template>
